@@ -1,0 +1,9 @@
+font:
+  normal:
+    family: FiraCode NF
+    style: Regular
+shell:
+  program: powershell
+  args:
+    - pwsh
+working_directory: C:\Users
