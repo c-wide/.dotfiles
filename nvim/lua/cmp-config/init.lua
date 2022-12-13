@@ -11,13 +11,13 @@ cmp.setup({
 		end,
 	},
 	mapping = cmp.mapping.preset.insert({
-		["<C-Space>"] = cmp.mapping.confirm({ select = true }),
-		["<Tab>"] = cmp.mapping(function()
+		["<Tab>"] = cmp.mapping.confirm({ select = true }),
+		["<C-n>"] = cmp.mapping(function()
 			if cmp.visible() then
 				cmp.select_next_item()
 			end
 		end, { "i", "s" }),
-		["<S-Tab>"] = cmp.mapping(function()
+		["<C-p>"] = cmp.mapping(function()
 			if cmp.visible() then
 				cmp.select_prev_item()
 			end
