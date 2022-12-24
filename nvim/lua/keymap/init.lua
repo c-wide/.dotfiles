@@ -77,9 +77,15 @@ nnoremap("<leader>/", function()
 end)
 vnoremap("<leader>/", ":lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>")
 
+-- Lazygit
+local terminal = require("toggleterm.terminal").Terminal
+local lazygit = terminal:new({ cmd = "lazygit", direction = "float", hidden = true })
+nnoremap("<leader>tg", function()
+	lazygit:toggle()
+end)
+
 -- Terminal keybinds
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
-vim.keymap.set("t", "jk", "<C-\\><C-n>")
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>:ToggleTerm<cr>")
 
 vim.keymap.set("t", "<S-h>", "<C-\\><C-n><C-w>h")
 vim.keymap.set("t", "<S-j>", "<C-\\><C-n><C-w>j")
